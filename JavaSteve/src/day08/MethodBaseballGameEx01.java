@@ -27,6 +27,7 @@ public class MethodBaseballGameEx01 {
 		 * */
 		//1.랜덤으로 세개의 수를 선택
 		//=> createRandomArray
+		
 		int min = 1, max = 9, size = 3;
 		int []com = createRandomArray(min,max,size);
 		
