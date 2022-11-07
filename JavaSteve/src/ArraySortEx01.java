@@ -20,8 +20,8 @@ public class ArraySortEx01 {
 		}
 		System.out.println();
 	}
-	System.out.println("-----------");
-	int arr2 [] = {9, 8, 7 ,6, 5, 4,3,2};
+		System.out.println("-----------");
+		int arr2 [] = {9, 8, 7 ,6, 5, 4,3,2};
 	Arrays.sort(arr2);
 	for(int tmp : arr2) {
 		System.out.println(tmp + " ");
