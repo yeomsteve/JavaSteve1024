@@ -112,10 +112,10 @@ public class StudentManagerTest {
 				System.out.print("기말 : ");
 				int finalScore = scan.nextInt();
 				System.out.print("수행평가 : ");
-				int performace = scan.nextInt();
+				int performance = scan.nextInt();
 				//입력한 성적 정보가 없으면 추가
 				//선택한 학생의 성적 정보들 중에서 과목, 학기가 같은 성적 정보가 없으면 추가
-				boolean res = stds[index].addScore(new Score(title, term, midScore, finalScore, performace));
+				boolean res = stds[index].addScore(new Score(title, term, midScore, finalScore, performance));
 				if(res) {
 					System.out.println("성적을 등록했습니다.");
 				}else {
