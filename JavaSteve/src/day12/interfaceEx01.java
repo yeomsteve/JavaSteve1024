@@ -7,10 +7,10 @@ public class interfaceEx01 {
 		//TvRemoteController tr = new TvRemoteController();
 		//하지만 interface 참조변수에 객체를 저장할수있음.
 		//구현 클래스의 객체를 인터페이스에 참조변수에 저장할수있다.
-		TvRemoteController remocon1 = new TvRemoteconA();
+		TvRemoteController remocon1 = new TvRemoconA();
 		//remocon1.print();
-		((TvRemoteconA)remocon1).print();
-		TvRemoteconA r2 = new TvRemoteconA();
+		((TvRemoconA)remocon1).print();
+		TvRemoconA r2 = new TvRemoconA();
 		r2.turn();
 		for(int i = 0; i<10; i++) {
 			r2.channelUp();
