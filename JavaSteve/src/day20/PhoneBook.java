@@ -1,63 +1,27 @@
 package day20;
 
+import java.util.ArrayList;
+
 import lombok.Data;
 
 @Data
-
 public class PhoneBook {
-		
-	private String name,work,number;
+	private String name, company;
+	ArrayList<PhoneNumber> pnList;
 
-	public PhoneBook(String name, String work, String number) {
+	public PhoneBook(String name, String company, ArrayList<PhoneNumber> pnList) {
 		this.name = name;
-		
-		this.work = work;
-		this.number = number;
+		this.company = company;
+		this.pnList = pnList;
 	}
 
-	@Override
-	public String toString() {
-		return "PhoneBook [name=" + name + ", work=" + work + ", number=" + number
-				+ "]";
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		PhoneBook other = (PhoneBook) obj;
-		if (name == null) {
-			if (other.name != null)
-				return false;
-		} else if (!name.equals(other.name))
-			return false;		
-		if (number == null) {
-			if (other.number != null)
-				return false;
-		} else if (!number.equals(other.number))
-			return false;
-		if (work == null) {
-			if (other.work != null)
-				return false;
-		} else if (!work.equals(other.work))
-			return false;
-		return true;
-	}
-
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((name == null) ? 0 : name.hashCode());	
-		result = prime * result + ((number == null) ? 0 : number.hashCode());
-		result = prime * result + ((work == null) ? 0 : work.hashCode());
-		return result;
+	public void print() {
+		System.out.println("=====================");
+		System.out.println("이름 : " + name);
+		System.out.println("직장 : " + company);
+		for(PhoneNumber tmp : pnList)
+			System.out.println(tmp);
+		System.out.println("=====================");
 	}
 	
-	}
-	
-
+}
