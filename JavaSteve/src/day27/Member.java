@@ -1,5 +1,8 @@
 package day27;
 
+import lombok.Data;
+
+@Data
 public class Member {
 	private String id, pw;
 
