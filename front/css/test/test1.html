@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>test1</title>
+	<style>
+		.box{ width: 100%; height:50%;
+		 border: 2px solid black;
+		 
+		 }
+		 .box2{
+			width:85%; height: 600px;			
+		}
+		 
+		 .box2>*{
+         display: inline-block;
+      }
+      .box2-title{
+         height: 50px; width: 90px;
+         text-align: center; font-weight: bold;
+      }
+      .box2-input{
+         width: 170px; height: 150px; text-align: start;
+				 margin-top: 5px;
+      }			
+		.legend{
+			position:relative;
+			height:45%;
+
+		}
+	
+/* 밑줄 */
+	.hr{ border: 1px solid grey;
+		width: 50%; height: 30px; 
+	}
+	
+	/* 테이블 */
+	.box3{
+		width:100%; height: 50%;
+		border: 1px solid black;
+		
+	}
+	
+	table{			
+			width: 100%;
+			height: 45%;
+		}
+		tr{
+			
+				border: 1px solid black;
+				border-width: 1px 0;
+				
+		}
+		tr>th:first-child{
+			width: 150px;
+			
+		}
+		tr>th:nth-child(2){
+			width: 100px;
+			
+			
+		}
+		tr>th:nth-child(3){
+			width: 100px;
+			
+		}
+		th{ 
+			height: 50px;
+			border: 1px solid black;
+			
+			
+			
+		}
+		td{
+			height: 60px;
+			border: 1px solid black;
+			
+		}
+		table{
+			height:400px;
+		}
+		.cell1{
+			color: white;
+			text-align: center;
+			font-weight: bold;
+			font-size: 20px;
+		}
+		.right{
+			float: right;
+			width: 90px;
+			height: 40px;		
+		}
+		.notice{
+			line-height: 50px;
+		}
+	</style>
+
+</head>
+<body>
+
+	
+ 
+	<form action="insert.no" method="post" class="legend">
+		<fieldset>
+				<legend>공지사항 작성하기</legend>
+				제목  <input type="text" name="title" placeholder="제목을 입력하시오."><br>
+				내용  <input type="text" name="content" placeholder="내용을 입력하시오." class="box2-input"><br>
+				<p>첨부파일<button name="uploadFile">파일선택</button> 선택된 파일 없음</p>
+				<br></br><br></br><button type="submit">작성하기</button>
+		</fieldset>
+</form>	
+
+</div>
+	<br></br><br></br>
+		
+	</div>
+</div>
+	<br></br>
+	<hr>
+<br></br>
+<div class="box3">
+	<table >
+        <tr >    
+
+            <td bgcolor="orange" class="cell1">번호</td>
+
+            <td bgcolor="orange" class="cell1">제목</td>
+
+            <td bgcolor="orange" class="cell1">작성자</td>
+
+            <td bgcolor="orange" class="cell1">작성일</td>
+
+            <td bgcolor="orange" class="cell1">조회수</td>
+
+        </tr>
+
+        <tr>    
+
+            <td bgcolor="lightyellow">9</td>
+
+            <td bgcolor="lightyellow" class="notice" >공지사항 제목9 <button class="right">바로가기</button></td>
+            <td bgcolor="lightyellow">user01</td>
+
+            <td bgcolor="lightyellow" >2021-03-29</td>
+
+            <td bgcolor="lightyellow">34</td>
+
+        </tr>
+
+        <tr>    
+
+            <td bgcolor="lightyellow">6</td>
+
+            <td bgcolor="lightyellow" class="notice">공지사항 제목6 <button class="right">바로가기</button></td>
+
+            <td bgcolor="lightyellow">answ445</td>
+
+            <td bgcolor="lightyellow">2021-03-12</td>
+
+            <td bgcolor="lightyellow">67</td>
+
+        </tr>
+
+        <tr>    
+
+            <td bgcolor="lightyellow">3</td>
+
+            <td bgcolor="lightyellow" class="notice">공지사항 제목3 <button class="right">바로가기</button></td>
+
+            <td bgcolor="lightyellow">testg12</td>
+
+            <td bgcolor="lightyellow">2021-03-01</td>
+
+            <td bgcolor="lightyellow">98</td>
+
+        </tr>
+
+        <tr>    
+
+            <td bgcolor="lightyellow">2</td>
+
+            <td bgcolor="lightyellow" class="notice">공지사항 제목2 <button class="right">바로가기</button></td>
+
+            <td bgcolor="lightyellow">palwe3</td>
+
+            <td bgcolor="lightyellow">2021-01-02</td>
+
+            <td bgcolor="lightyellow">85</td>
+
+        </tr>
+
+        <tr>    
+
+            <td bgcolor="lightyellow">1</td>
+
+            <td bgcolor="lightyellow" class="notice">공지사항 제목1 <button class="right">바로가기</button></td>
+
+            <td bgcolor="lightyellow">xml23</td>
+
+            <td bgcolor="lightyellow">2020-12-24</td>
+
+            <td bgcolor="lightyellow">124</td>
+
+        </tr>
+
+
+				<tr>    
+					
+
+					<td colspan="3" bgcolor="orange" class="cell1">전체공지사항 갯수</td>
+
+					
+
+					<td colspan="2" bgcolor="orange" class="cell1">5개</td>
+
+					
+
+			</tr>
+
+</table>
+</div>
+
+</body>
+</html>
