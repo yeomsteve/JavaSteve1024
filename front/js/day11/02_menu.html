@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="../js/jquery.min.js"></script>
+	<style>
+		
+		.btn{
+			width:50px; height:50px; font-size: 15px; float:right;
+		}
+		.box{
+			width:200px; height: 300px; border: 2px solid red; float: right;
+			position: fixed; 
+		}
+		.btn-exit{	float:right;		color:red;
+			position: absolute; cursor: pointer;
+			
+		}
+	</style>
+	
+</head>
+<body>
+<button type="button" class="btn">버튼</button>
+<div class="box">
+	<button class="btn-exit">X</button>
+</div>
+<script>
+$('.btn').click(function(){
+$('.box').fadeIn();
+});
+$('.btn-exit').click(function(){
+	$('.box').hide();
+})
+</script>
+</body>
+</html>
