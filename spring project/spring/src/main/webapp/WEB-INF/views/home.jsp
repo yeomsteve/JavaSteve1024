@@ -8,13 +8,15 @@
 </head>
 <body>
 <h1>
-	Hello World!
+	Hello world!  
 </h1>
-<!--필드 이름을 썼을때 필드를 직접 호출하는게 아니라 getter 호출
-xxx.name을 쓰면 xxx.getName()이 호출된다.  -->
-<p> 아이디는 :
-<input type=""> ${login.id}</input> </p>
-<p> 비밀번호는 : ${login.pw}</p>
+
+<P> 안녕하세요. 제 이름은 ${name1} 입니다. </P>
+<p> 제 나이는 ${age}살입니다.</p>
+<form action="/spring/" method="post">
+	<input type="text" name="name"> <br>
+	<input type="text" name="age"> <br>
+	<button>전송</button>
 </form>
 </body>
 </html>
