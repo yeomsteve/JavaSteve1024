@@ -1,11 +1,11 @@
 package kr.kh.spring.service;
 
 import javax.mail.internet.MimeMessage;
-import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import kr.kh.spring.dao.MemberDAO;
@@ -18,11 +18,15 @@ public class MemberServiceImp implements MemberService {
 	MemberDAO memberDao;
 	@Autowired
 	private JavaMailSender mailSender;
+	@Autowired
+	BCryptPasswordEncoder passwordEncoder;
 
 	@Override
 	public boolean signup(MemberVO member) {
 		if(member == null)
 			return false;
+		String newPw = passwordEncoder.encode(member.getMe_pw());
+		member.setMe_pw(newPw);
 		if(memberDao.insertMember(member) != 0)
 			return true;
 		return false;
@@ -63,7 +67,7 @@ public class MemberServiceImp implements MemberService {
 		return str;
 	}
 	private void sendEmail(String title, String content, String email) {
-		String setfrom = "jjojjosteve@gmail.com";         
+		String setfrom = "stajun@gmail.com";         
 	    
 	    try {
 	        MimeMessage message = mailSender.createMimeMessage();
@@ -87,7 +91,6 @@ public class MemberServiceImp implements MemberService {
 		if(mok == null)
 			return false;
 		MemberOKVO dbMok = memberDao.selectMemberOK(mok);
-		System.out.println("DB에서 가져온 인증 정보: "+ dbMok);
 		if(dbMok != null) {
 			//member_ok 테이블에서 해당 데이터를 삭제하고
 			memberDao.deleteMemberOK(mok);
@@ -96,5 +99,18 @@ public class MemberServiceImp implements MemberService {
 			return true;
 		}
 		return false;
+	}
+
+	@Override
+	public MemberVO login(MemberVO member) {
+		if(member == null || member.getMe_id() == null 
+			|| member.getMe_pw() == null)
+			return null;
+		MemberVO dbMember = memberDao.selectMemberById(member.getMe_id());
+		if(dbMember == null)
+			return null;
+		if(passwordEncoder.matches(member.getMe_pw(), dbMember.getMe_pw()))
+			return dbMember;
+		return null;
 	}
 }

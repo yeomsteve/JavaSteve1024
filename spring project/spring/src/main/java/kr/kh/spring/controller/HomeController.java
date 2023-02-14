@@ -45,17 +45,31 @@ public class HomeController {
 	
 	@RequestMapping(value = "/email", method=RequestMethod.GET)
 	public ModelAndView emial(ModelAndView mv,MemberOKVO mok) {
-		System.out.println("인증 정보: " + mok);
 		if(memberService.emailAuthenticationConfirm(mok)) {
-			System.out.println("인증 성공");
+			
 		}else {
-			System.out.println("인증 실패");			
+			
 		}
 		
 		mv.setViewName("redirect:/");
 		return mv;
 	}
-	
+	@RequestMapping(value = "/login", method=RequestMethod.GET)
+	public ModelAndView login(ModelAndView mv) {
+		mv.setViewName("/member/login");
+		return mv;
+	}
+	@RequestMapping(value = "/login", method=RequestMethod.POST)
+	public ModelAndView loginPost(ModelAndView mv, MemberVO member) {
+		MemberVO user = memberService.login(member);
+		mv.addObject("user", user);
+		if(user != null) 
+			mv.setViewName("redirect:/");
+		else
+			mv.setViewName("redirect:/login");
+		System.out.println(user);
+		return mv;
+	}
 	
 	
 	@RequestMapping(value = "/ex1")
