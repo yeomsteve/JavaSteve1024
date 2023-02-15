@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>semi</title>
+    <script src="../js/jquery.min.js"></script>
+    <style>
+        *{padding: 0; margin: 0;}
+        .top-menu{width: 100%;  height: 105px;
+        border: 1px solid gray;
+        box-shadow: 0px 0px 6px 0px rgb(41 42 42 / 15%);
+        position: relative; box-sizing: border-box; font: gray;
+        display: block; }
+
+        .inner-topmenu{
+            width:60%; height: 60px;position: relative;
+             top: 50%; left: 50%; transform: translate(-50%, -50%);
+            border: 1px solid red; text-align: center;
+        }
+        
+        .login{
+            float: right; 
+        }
+
+        .btn-menu{
+            width: 50px; height: 50px; background: aqua;
+            float: left; margin-top: 5px; margin-left: 5px;
+            cursor: pointer;
+        }
+        
+        .btn-home{
+            width: 200px; height: 50px; background: yellow;           
+            float: left; margin-top: 5px; margin-left: 30px;
+            cursor: pointer;
+        }
+        
+        input{
+            width: 400px; height: 30px;
+            float: left; margin-top: 14px; margin-left: 30px;            
+        }
+        .btn-map{
+            width: 100px; height: 50px; background:aqua;
+            float: right; margin-top: 5px; margin-right: 5px;
+            cursor: pointer;
+        }
+        
+        .top-menu1{ 
+            border: 1px solid blue; position: relative;
+            padding: 6px 0 10px 28px;
+            overflow: hidden;
+            font-weight: bold;
+            color: #333;
+            font-size: 36px;
+            letter-spacing: -1px;
+            word-break: keep-all;
+            font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+        /* 마이페이지 아랫부분 시작 위치*/
+        .hub{
+            width:100%; height: 1000px;
+            background: gray;
+
+        }
+
+        .end{
+            width: 100%; height: 200px;
+            background: red;
+        }
+    </style>
+    <div class="top-menu">
+        <div class="inner-topmenu">
+            <button class="btn-menu">메뉴</button>
+            <button class="btn-home">홈버튼</button>
+            <input type="text" placeholder="검색창" title="검색"
+            id="search">
+            <button class="btn-map">지도</button>
+        </div>
+        <div class="login">login</div>
+    </div>
+    <div class="top-menu1">마이페이지</div>
+    <div class="hub">허브</div>
+        
+
+        
+    
+</head>
+<body>
+    <script>
+
+    </script>
+</body>
+<footer>
+    <div class="end">푸터</div>
+</footer>
+</html>
