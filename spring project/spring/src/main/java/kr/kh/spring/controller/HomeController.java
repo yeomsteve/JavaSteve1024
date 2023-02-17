@@ -77,7 +77,8 @@ public class HomeController {
 	}
 	
 	@RequestMapping(value = "/logout", method=RequestMethod.GET)
-	public ModelAndView logout(ModelAndView mv, HttpSession session,
+	public ModelAndView logout(ModelAndView mv, 
+			HttpSession session,
 			HttpServletResponse response) throws IOException {
 		MemberVO user = (MemberVO)session.getAttribute("user");
 		if(user != null) {
@@ -85,7 +86,6 @@ public class HomeController {
 			PrintWriter out = response.getWriter();
 			out.println("<script>alert('로그아웃 되었습니다.');location.href='/spring/'</script>");
 			out.flush();
-			
 		}
 		//세션에 있는 회원 정보를 삭제
 		session.removeAttribute("user");

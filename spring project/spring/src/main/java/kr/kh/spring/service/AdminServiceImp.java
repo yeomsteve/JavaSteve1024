@@ -15,8 +15,33 @@ public class AdminServiceImp implements AdminService{
 	BoardDAO boardDao;
 	
 	@Override
-	public ArrayList<BoardTypeVO> getBoardType() {		
+	public ArrayList<BoardTypeVO> getBoardType() {
 		return boardDao.selectAllBoardType();
+	}
+
+	@Override
+	public boolean insertBoardType(BoardTypeVO bt) {
+		if(bt == null || bt.getBt_name().trim().length() == 0)
+			return false;
+		try {
+			return boardDao.insertBoardType(bt);
+		}catch(Exception e) {
+			return false;
+		}
+	}
+
+	@Override
+	public boolean updateBoardType(BoardTypeVO bt) {
+		if(bt == null || bt.getBt_name().trim().length() == 0)
+			return false;
+		return boardDao.updateBoardType(bt);
+	}
+
+	@Override
+	public boolean deleteBoardType(int bt_num) {
+		if(bt_num <= 0) 
+			return false;
+		return boardDao.deleteBoardType(bt_num);
 	}
 
 }
