@@ -1,16 +1,15 @@
-package kr.kh.spring.service;
+package kr.kh.test.service;
 
-import kr.kh.spring.vo.MemberOKVO;
-import kr.kh.spring.vo.MemberVO;
+import kr.kh.test.vo.MemberVO;
 
 public interface MemberService {
 
+	String selectMemberName(Integer num);
+
 	boolean signup(MemberVO member);
 
-	void emailAuthentication(String me_id, String me_email);
-
-	boolean emailAuthenticationConfirm(MemberOKVO mok);
-
 	MemberVO login(MemberVO member);
+
+	String authenticationNumber(MemberOKVO);
 
 }
