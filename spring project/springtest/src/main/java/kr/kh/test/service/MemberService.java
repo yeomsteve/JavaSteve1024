@@ -1,5 +1,6 @@
 package kr.kh.test.service;
 
+import kr.kh.test.vo.MemberOKVO;
 import kr.kh.test.vo.MemberVO;
 
 public interface MemberService {
@@ -10,6 +11,6 @@ public interface MemberService {
 
 	MemberVO login(MemberVO member);
 
-	String authenticationNumber(MemberOKVO);
+	boolean emailAuthentication(MemberOKVO mok);
 
 }
