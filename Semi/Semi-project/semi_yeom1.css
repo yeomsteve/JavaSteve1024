@@ -245,8 +245,7 @@
     border: 1px solid #ccc;
   }
   .reservation-head-wrap1 .counter:before{    
-    display: inline-block;
-    display: inline;
+    display: inline-block;  
     width: 16px;
     height: 16px;
     margin: -2px 5px 0 0;
@@ -260,10 +259,12 @@
     width:750px;
    }
    .reservation-head-wrap1{
-    display: inline-block;
+    float:right;
+    position: relative;
+    display:inline;
     text-align: center;
     height:50px;
-    width:375px;
+    width:100px;
    }
   
   
@@ -327,21 +328,28 @@
     color: gray;   
    }
    /*------------------액티비티--------------------*/
-   .view-box{   
+   .view-box{       
     margin-top: 100px;
     float: right;
     width: 750px;
     height: 300px;
     border: 1px solid white;
+    border-bottom-color: black;
    }
-   .view-head{
-    text-align: center;      
+   .view-head-wrap1{     
+    float:right;
+    position: relative;
+    display:inline;
+    text-align: center;
     height:50px;
-    width:750px;
+    width:200px;
    }
-   .view-head1{
+   .view-head-wrap{    
     height: 50px;
     border: 1px solid white;
+    width: 750px;
+    margin-bottom: 20px;
+    text-align: center;
    }
    .view-body{
     height:198px;
@@ -397,12 +405,12 @@
     height: 300px;
     border: 1px solid white;
    }
-   .fav-head{
+   .fav-head-wrap{
     height: 50px;
     border: 1px solid white;
     text-align: center;
    }
-   .fav-head1{
+   .fav-head-wrap1{
     height: 50px;
     border: 1px solid white;
    }
@@ -416,9 +424,44 @@
     text-align: center;
     font-size: 30px;
    }
-   
-
-   .view-head .btn-my-prev{   
+   .fav-head-wrap1 .counter{
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: inline-block;
+    width: 98px;
+    height: 36px;
+    line-height: 34px;
+    color: #111;
+    font-weight: bold;
+    text-align: center;
+    font-size: 14px;
+    border: 1px solid #ccc;
+  }
+  .fav-head-wrap1 .counter:before{    
+    display: inline-block;  
+    width: 16px;
+    height: 16px;
+    margin: -2px 5px 0 0;
+    content: '';
+    vertical-align: middle;
+    background: url(//img.modetour.com/modetour/2016/common/sp_ico_bullet_201611.png) -56px -92px no-repeat;
+  }
+   .fav-head-wrap{
+    text-align: center;      
+    height:50px;
+    width:750px;
+    margin-bottom: 20px;
+   }
+   .fav-head-wrap1{
+    float:right;
+    position: relative;
+    display:inline;
+    text-align: center;
+    height:50px;
+    width:100px;
+   }
+   .fav-head-wrap1 .btn-my-prev1{   
     position: absolute;
     right: 131px;
     top: 0;
@@ -429,8 +472,8 @@
     text-indent: -9999em;
     text-align: center;
    }
-   .view-head .btn-my-prev:before{
-    position: absolute;
+   .fav-head-wrap1 .btn-my-prev1:before{
+    position: relative;
     left: 50%;
     top: 50%;
     display: block;
@@ -440,7 +483,7 @@
     content: '';
     background: url(//img.modetour.com/modetour/2016/common/sp_ico_bullet_201611.png) no-repeat 0 -75px;
    }
-   .view-head .btn-my-next{
+   .fav-head-wrap1 .btn-my-next1{
     position: absolute;
     right: 99px;
     top: 0;
@@ -451,8 +494,56 @@
     border: 1px solid #ccc;
     text-indent: -9999em;
    }
-   .view-head .btn-my-next:before{
+   .fav-head-wrap1 .btn-my-next1:before{
+    position: relative;
+    display: block;
+    left: 50%;
+    top: 50%;
+    width: 7px;
+    height: 12px;
+    margin: -6px 0 0 -3.5px;
+    content: '';
+    background: url(//img.modetour.com/modetour/2016/common/sp_ico_bullet_201611.png) no-repeat -7px -75px;
+   }
+
+
+
+   .view-head-wrap1 .btn-my-prev{   
     position: absolute;
+    right: 131px;
+    top: 0;
+    display: block;
+    width: 31px;
+    height: 36px;
+    border: 1px solid #ccc;
+    text-indent: -9999em;
+    text-align: center;
+   }
+   .view-head-wrap1 .btn-my-prev:before{
+    position: relative;
+    left: 50%;
+    top: 50%;
+    display: block;
+    width: 7px;
+    height: 12px;
+    margin: -6px 0 0 -3.5px;
+    content: '';
+    background: url(//img.modetour.com/modetour/2016/common/sp_ico_bullet_201611.png) no-repeat 0 -75px;
+   }
+   .view-head-wrap1 .btn-my-next{
+    position: absolute;
+    right: 99px;
+    top: 0;
+    display: block;
+    width: 31px;
+    height: 36px;
+    margin-left: -1px;
+    border: 1px solid #ccc;
+    text-indent: -9999em;
+   }
+   .view-head-wrap1 .btn-my-next:before{
+    position: relative;
+    display: block;
     left: 50%;
     top: 50%;
     width: 7px;
@@ -462,7 +553,7 @@
     background: url(//img.modetour.com/modetour/2016/common/sp_ico_bullet_201611.png) no-repeat -7px -75px;
    }
    
-   .view-head .counter{
+   .view-head-wrap1 .counter{
     position: absolute;
     right: 0;
     top: 0;
@@ -476,7 +567,7 @@
     font-size: 14px;
     border: 1px solid #ccc;    
    }
-   .view-head .counter:before{
+   .view-head-wrap1 .counter:before{
     display: inline-block;
     *display: inline;
     width: 16px;
