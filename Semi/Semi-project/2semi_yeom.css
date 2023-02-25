@@ -1,0 +1,793 @@
+
+*{
+    padding: 0; margin: 0;
+  }
+  
+  #body{ 
+    min-width: 1190px;
+    font-family: -apple-system,BlinkMacSystemFont,"Malgun Gothic","맑은 고딕",helvetica,"Apple SD Gothic Neo",sans-serif;
+    line-height: 16px; font-size: 12px; color: #202020; 
+    
+  }
+  ul,li{
+    list-style: none;
+  }
+  .clearfix::after{
+    content: ''; clear: both; display: block; 
+  }
+  a{
+    text-decoration: none;
+  }
+  
+  /* 공통 적용 */
+  
+  
+  
+  .header{
+    position: fixed; height: 145px; width: 100%; top: 0; background-color: #fff;
+    box-shadow: 0 3px 5px 1px rgba(0,0,0,0.3);  z-index: 998;
+    
+  }
+  .header .head-box{
+    width: 1190px; margin: 0 auto; height: 100%;
+      position: relative;
+  }
+  
+  .header .head-box .main-icon-box{
+    float: left; width: 380px; background-color: #fff; margin-top: 20px; height: 75px; text-align: center;
+    
+  }
+  
+  .head-box .search-containerbox .search{
+    width: 560px; height: 50px; border: 1px solid black; background-color:#eef0f2;
+    font-size: 15px; float: left;  padding: 0 5px;
+  }
+  .header .head-box .search-containerbox{
+    float: left; background-color: #fff; height: 100px;
+    
+  }
+  .head-box .search-containerbox .search-box{
+    position: relative; border-radius: 10px;
+    float: right; width: 580px; padding-top: 25px;
+  }
+  .head-box .search-containerbox .search-box>*{
+    border-radius: 10px;
+  }
+  .head-box .search-containerbox .search-box .btn-search{
+    width: 50px; height: 50px; position: absolute; border: none; 
+    top: 25px; right: 10px; bottom: 0; cursor: pointer; padding: 0; outline: 0;
+    font-size: 30px;line-height: 50px; color: black; text-align: center;
+  }
+  .header .head-box .main-menu-box{
+    width: 100%; 
+  }
+  .head-box .main-menu-box .list-menu{
+    width: 100%; height: 45px; max-width: 1190px; margin: 0 auto; display: flex;
+  }
+  .head-box .main-menu-box .item-menu{
+   display: flex; justify-content: space-around; width: 100%; height: 100%; background-color: #fff;
+   align-items: center;
+  }
+  .head-box .main-menu-box .link-menu{
+    display: flex; align-items: center; color: #000;
+    font-family: -apple-system,BlinkMacSystemFont,"Malgun Gothic","맑은 고딕",helvetica,"Apple SD Gothic Neo",sans-serif;
+  }
+  .head-box .main-menu-box .icon-menu{
+    width: 30px; height: 30px;
+  }
+  .head-box .main-menu-box .item-menu:hover{
+    border-bottom: 5px solid #0a97cd;
+  }
+  
+  /* 메인 메뉴바 끝 */
+  .search-containerbox .search-keyword{
+    position: absolute; right: 217.5px; top: 85px; width: 570px; border: 1px solid #666; background: #fff;
+    border-radius: 10px; z-index: 999; text-align: left; display: none; 
+  }
+  .search-containerbox .search-keyword h2{
+    height: 33px; line-height: 33px; margin-top: 20px; padding: 0 28px; font-weight: 800; 
+    font-size: 20px; color: #333; letter-spacing: -0.5px;
+  }
+  .search-containerbox .search-keyword .list-search{
+    float: left; width: 50%; padding-bottom: 32px;
+  }
+  .search-containerbox .search-keyword .list-search .item-search{
+    margin-top: 20px; padding-left: 28px;
+  }
+  .search-containerbox .search-keyword .num{
+    float: left; width: 20px; height: 20px; background: #666; border-radius: 3px; color: #fff;
+    font-size: 13px; text-align: center; vertical-align: middle;
+  }
+  .search-containerbox .search-keyword .link-search{
+    overflow: hidden;line-height: 20px; margin-left: 10px; color: #333;
+    font-size: 15px; font-weight: 700;text-overflow: ellipsis; white-space: nowrap;
+  }
+  .search-containerbox .search-keyword .list-search+.list-search .link-search{
+    font-weight: 400; color: #666;
+  }
+  .search-containerbox .search-keyword .list-search+.list-search .num{
+    background: #949494;
+  }
+  .search-containerbox .search-keyword .close-keyword{
+    width: 100%; overflow: hidden; height: 33px; background: #eef0f2; text-align: right;
+    border-radius: 0 0 10px 10px;
+  }
+  .search-containerbox .search-keyword button{
+    padding: 0 20px; line-height: 33px; font-size: 14px; color: #333; border-radius: 0 0 10px 0;
+    border: 0 none; cursor: pointer;
+  }
+  /* 서치바 클릭 박스 */
+  
+  .head-box .box-quickMenu{
+    float: right; width: 210px; background-color: #fff; height: 100px;
+  }
+  .head-box .box-quickMenu .box-menu{
+    width: 70px; float: left; text-align: center; line-height: 20px; padding-top: 30px;
+  }
+  
+  .box-quickMenu .box-menu .btn-quick i{
+    font-size: 30px; color: #000;
+  }
+  .box-quickMenu .box-menu .text-quick{
+    display: block; font-size: 8px; color: #000;
+    font-family: -apple-system,BlinkMacSystemFont,"Malgun Gothic","맑은 고딕",helvetica,"Apple SD Gothic Neo",sans-serif;
+  }
+    /* 메뉴바 우측 아이콘 */  
+  
+  .contents{
+    padding-top: 175px; z-index: 1;
+  }
+  .contents .content-box{
+    width: 1190px; margin: 0 auto; font-size: 12px;position: relative;
+    height: 1800px;
+  }
+  .contents .content-box .content-title{
+    position: relative; border-bottom: 2px solid #000;
+    font-size: 25px;   
+    font-family: -apple-system,BlinkMacSystemFont,"Malgun Gothic","맑은 고딕",helvetica,"Apple SD Gothic Neo",sans-serif; 
+  }
+  .contents .content-box .content-title .info{
+    float:right;  width: 150px; height: 35.2px;
+    font-size: 15px; color: black;
+    font-family: -apple-system,BlinkMacSystemFont,"Malgun Gothic","맑은 고딕",helvetica,"Apple SD Gothic Neo",sans-serif; 
+  }  
+  .contents .content-box .content-title .info a{
+    font-weight: bold;
+    color: black;
+    font-family: -apple-system,BlinkMacSystemFont,"Malgun Gothic","맑은 고딕",helvetica,"Apple SD Gothic Neo",sans-serif; 
+
+  }
+  .contents .content-box .content-title .info a:hover{
+    color: red;
+    font-family: -apple-system,BlinkMacSystemFont,"Malgun Gothic","맑은 고딕",helvetica,"Apple SD Gothic Neo",sans-serif; 
+  }
+  .contents .content-box .content-menu{
+    position: relative;
+    height: 100px;
+    width: 1190px;  
+  }
+  .contents .content-box .content-menu ul li a{    
+    line-height: 100px;
+    
+  }
+
+  .list-menu1{   
+    list-style: none;
+    float:left;
+    width: 100%; height: 100px; border: 1px solid #000;
+    border-bottom-color: white;
+    border-left-color: white;
+    border-right-color: white;    
+  }
+  .item-menu1{
+    float:left;    
+    width: 238.6px; height: 97px; text-align: center; line-height: 48px;
+  }
+  .item-menu1~.item-menu1{
+    margin-left: -1px;
+  }
+  .item-menu1.selected{
+    background-color: #29c16d72;
+  }
+  .link-menu1{
+    height: 100%; width: 100%; display: block; color: #000;
+  }
+  .content-menu .list-menu1 .item-menu1 a{    
+    font-size: 16px;    
+    font-family: -apple-system,BlinkMacSystemFont,"Malgun Gothic","맑은 고딕",helvetica,"Apple SD Gothic Neo",sans-serif;
+    font-weight: bold;
+  }
+  /* -------------------메뉴1----------------------- */
+
+  .reservation-box{
+    margin-top: 100px;
+    position:relative;
+    height: 300px;
+    border: none;
+  }
+  .reservation-box .reservation-head{
+    position:relative;
+    height: 40px;
+    font-size: 25px;
+    font-family: -apple-system,BlinkMacSystemFont,"Malgun Gothic","맑은 고딕",helvetica,"Apple SD Gothic Neo",sans-serif;
+    border: none;
+  }
+ .right_cont .counter{
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: inline-block;
+  width: 98px;
+  height: 36px;
+  line-height: 34px;
+  color: #111;
+  font-weight: bold;
+  text-align: center;
+  font-size: 12px;
+  border: 1px solid #ccc;
+ }
+ .right_cont .counter:before{    
+  display: inline-block;  
+  width: 16px;
+  height: 16px;
+  margin: -2px 5px 0 0;
+  content: '';
+  vertical-align: middle;
+  background: url(//img.modetour.com/modetour/2016/common/sp_ico_bullet_201611.png) -56px -92px no-repeat;
+  }
+
+
+  .table{
+    text-indent: initial;
+  }
+  .tbl {
+    position: relative;
+    table-layout: fixed;
+    display: table;
+    width: 100%;
+    height: 238px;
+    border: 1px solid gray;
+  }
+  .tbl table{
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    border-collapse: separate;
+    table-layout: fixed;
+    font-size: 15px;
+    box-sizing: border-box;
+    border-spacing: 0;
+  }
+  .tbl table.board_type{
+    border-top: 1px solid #999;
+  }
+  .colgroup{
+    display: table-column-group;
+  }
+  .thead{
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+  }
+  .th{
+    display: table-cell;
+    vertical-align: inherit;    
+  }
+  .tbl table.board_type th .tbl table.board_type td{
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    color: #333;
+  }
+  .tbl th{
+    background-color: #f7f7f7;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .tbl th, .tbl td{
+    min-height: 54px;
+    line-height: 23px;
+    font-size: 15px;
+    font-family: -apple-system,BlinkMacSystemFont,"Malgun Gothic","맑은 고딕",helvetica,"Apple SD Gothic Neo",sans-serif;
+
+  }
+  .tbl tbody{
+    position: relative;
+  }
+  .tbody{
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+  }
+  .tr{
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+  }
+  .tbl table.board_type tr:last-child td {
+    border-bottom: 0;
+  }
+  .tbl table.board_type th, .tbl table.board_type td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    color: #333;
+  }
+  .tbl td{
+    font-size: 15px;
+  }
+  .tbl th, .tbl td {
+    text-align: left;
+    min-height: 54px;
+    padding: 15px 20px;
+    font-weight: 400;
+    line-height: 23px;
+  }
+  td {
+    display: table-cell;
+    vertical-align: inherit;
+  }
+  .data_no {
+    display: table;
+    width: 100%;
+    min-height: 172px;
+    text-align: center;
+    font-size: 15px;
+    font-family: -apple-system,BlinkMacSystemFont,"Malgun Gothic","맑은 고딕",helvetica,"Apple SD Gothic Neo",sans-serif;
+
+  }
+  .data_no .cont {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .data_no .cont strong {
+    position: relative;
+    display: block;
+    padding-top: 70px;
+    color: #333;
+    line-height: 1.6;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: -apple-system,BlinkMacSystemFont,"Malgun Gothic","맑은 고딕",helvetica,"Apple SD Gothic Neo",sans-serif;
+    }
+    .data_no .cont strong:before {
+      content: "";
+      display: inline-block;
+      width: 45px;
+      height: 45px;
+      position: absolute;
+      top: 5px;
+      left: 50%;
+      margin-left: -22px;
+      background: url(https://image.hanatour.com/usr/static/img2/pc/com/spr_icn.png) no-repeat;
+      background-position: 0 -205px;
+    }/*--------예약테이블-------------------*/
+
+    .qna-box{
+      margin-top: 100px;
+      position:relative;
+      height: 300px;
+      border: none;
+    }
+    .qna-box .qna-head{
+      position:relative;
+      height: 40px;
+      font-size: 25px;
+      font-family: -apple-system,BlinkMacSystemFont,"Malgun Gothic","맑은 고딕",helvetica,"Apple SD Gothic Neo",sans-serif;
+      border: none;
+    }
+   .right_cont1 .counter{
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: inline-block;
+    width: 98px;
+    height: 36px;
+    line-height: 34px;
+    color: #111;
+    font-weight: bold;
+    text-align: center;
+    font-size: 12px;
+    border: 1px solid #ccc;
+   }
+   .right_cont1 .counter:before{    
+    display: inline-block;  
+    width: 16px;
+    height: 16px;
+    margin: -2px 5px 0 0;
+    content: '';
+    vertical-align: middle;
+    background: url(//img.modetour.com/modetour/2016/common/sp_ico_bullet_201611.png) -56px -92px no-repeat;
+    }
+  
+  
+    .table{
+      text-indent: initial;
+    }
+    .tbl1 {
+      position: relative;
+      table-layout: fixed;
+      display: table;
+      width: 100%;
+      height: 238px;
+      border: 1px solid gray;
+    }
+    .tbl1 table{
+      width: 100%;
+      border-bottom: 1px solid #ddd;
+      border-collapse: separate;
+      table-layout: fixed;
+      font-size: 15px;
+      box-sizing: border-box;
+      border-spacing: 0;
+    }
+    .tbl1 table.board_type1{
+      border-top: 1px solid #999;
+    }
+    .colgroup{
+      display: table-column-group;
+    }
+    .thead{
+      display: table-header-group;
+      vertical-align: middle;
+      border-color: inherit;
+    }
+    .th{
+      display: table-cell;
+      vertical-align: inherit;    
+    }
+    .tbl1 table.board_type1 th .tbl1 table.board_type1 td{
+      padding: 15px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+      color: #333;
+    }
+    .tbl1 th{
+      background-color: #f7f7f7;
+      font-size: 15px;
+      font-weight: 600;
+    }
+    .tbl1 th, .tbl1 td{
+      min-height: 54px;
+      line-height: 23px;
+      font-size: 15px;
+      font-family: -apple-system,BlinkMacSystemFont,"Malgun Gothic","맑은 고딕",helvetica,"Apple SD Gothic Neo",sans-serif;
+  
+    }
+    .tbl1 tbody{
+      position: relative;
+    }
+    .tbody{
+      display: table-row-group;
+      vertical-align: middle;
+      border-color: inherit;
+    }
+    .tr{
+      display: table-row;
+      vertical-align: inherit;
+      border-color: inherit;
+    }
+    .tb1l table.board_type1 tr:last-child td {
+      border-bottom: 0;
+    }
+    .tbl1 table.board_type1 th, .tbl1 table.board_type1 td {
+      padding: 15px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+      color: #333;
+    }
+    .tbl1 td{
+      font-size: 15px;
+    }
+    .tbl1 th, .tbl1 td {
+      text-align: left;
+      min-height: 54px;
+      padding: 15px 20px;
+      font-weight: 400;
+      line-height: 23px;
+    }
+    td {
+      display: table-cell;
+      vertical-align: inherit;
+    }
+    .data_no1 {
+      display: table;
+      width: 100%;
+      min-height: 172px;
+      text-align: center;
+      font-size: 15px;
+      font-family: -apple-system,BlinkMacSystemFont,"Malgun Gothic","맑은 고딕",helvetica,"Apple SD Gothic Neo",sans-serif;
+  
+    }
+    .data_no1 .cont1 {
+      display: table-cell;
+      vertical-align: middle;
+    }
+    .data_no1 .cont1 strong {
+      position: relative;
+      display: block;
+      padding-top: 70px;
+      color: #333;
+      line-height: 1.6;
+      font-size: 15px;
+      font-weight: 400;
+      font-family: -apple-system,BlinkMacSystemFont,"Malgun Gothic","맑은 고딕",helvetica,"Apple SD Gothic Neo",sans-serif;
+      }
+      .data_no1 .cont1 strong:before {
+        content: "";
+        display: inline-block;
+        width: 45px;
+        height: 45px;
+        position: absolute;
+        top: 5px;
+        left: 50%;
+        margin-left: -22px;
+        background: url(https://image.hanatour.com/usr/static/img2/pc/com/spr_icn.png) no-repeat;
+        background-position: 0 -205px;
+      }
+    /*-------------문의테이블----------------*/
+      
+    .mileage-box{
+      margin-top: 100px;
+      position:relative;
+      height: 300px;
+      border: none;
+    }
+    .mileage-box .mileage-head{
+      position:relative;
+      height: 40px;
+      font-size: 25px;
+      font-family: -apple-system,BlinkMacSystemFont,"Malgun Gothic","맑은 고딕",helvetica,"Apple SD Gothic Neo",sans-serif;
+      border: none;
+    }
+   .right_cont2 .counter{
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: inline-block;
+    width: 98px;
+    height: 36px;
+    line-height: 34px;
+    color: #111;
+    font-weight: bold;
+    text-align: center;
+    font-size: 12px;
+    border: 1px solid #ccc;
+   }
+   .right_cont2 .counter:before{    
+    display: inline-block;  
+    width: 16px;
+    height: 16px;
+    margin: -2px 5px 0 0;
+    content: '';
+    vertical-align: middle;
+    background: url(//img.modetour.com/modetour/2016/common/sp_ico_bullet_201611.png) -56px -92px no-repeat;
+    }
+  
+  
+    .table{
+      text-indent: initial;
+    }
+    .tbl2 {
+      position: relative;
+      table-layout: fixed;
+      display: table;
+      width: 100%;
+      height: 238px;
+      border: 1px solid gray;
+    }
+    .tbl2 table{
+      width: 100%;
+      border-bottom: 1px solid #ddd;
+      border-collapse: separate;
+      table-layout: fixed;
+      font-size: 15px;
+      box-sizing: border-box;
+      border-spacing: 0;
+    }
+    .tbl2 table.board_type2{
+      border-top: 1px solid #999;
+    }
+    .colgroup{
+      display: table-column-group;
+    }
+    .thead{
+      display: table-header-group;
+      vertical-align: middle;
+      border-color: inherit;
+    }
+    .th{
+      display: table-cell;
+      vertical-align: inherit;    
+    }
+    .tbl2 table.board_type2 th .tbl2 table.board_type2 td{
+      padding: 15px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+      color: #333;
+    }
+    .tbl2 th{
+      background-color: #f7f7f7;
+      font-size: 15px;
+      font-weight: 600;
+    }
+    .tbl2 th, .tbl2 td{
+      min-height: 54px;
+      line-height: 23px;
+      font-size: 15px;
+      font-family: -apple-system,BlinkMacSystemFont,"Malgun Gothic","맑은 고딕",helvetica,"Apple SD Gothic Neo",sans-serif;
+  
+    }
+    .tbl2 tbody{
+      position: relative;
+    }
+    .tbody{
+      display: table-row-group;
+      vertical-align: middle;
+      border-color: inherit;
+    }
+    .tr{
+      display: table-row;
+      vertical-align: inherit;
+      border-color: inherit;
+    }
+    .tb12 table.board_type2 tr:last-child td {
+      border-bottom: 0;
+    }
+    .tbl2 table.board_type2 th, .tbl2 table.board_type2 td {
+      padding: 15px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+      color: #333;
+    }
+    .tbl2 td{
+      font-size: 15px;
+    }
+    .tbl2 th, .tbl2 td {
+      text-align: left;
+      min-height: 54px;
+      padding: 15px 20px;
+      font-weight: 400;
+      line-height: 23px;
+    }
+    td {
+      display: table-cell;
+      vertical-align: inherit;
+    }
+    .data_no2 {
+      display: table;
+      width: 100%;
+      min-height: 172px;
+      text-align: center;
+      font-size: 15px;
+      font-family: -apple-system,BlinkMacSystemFont,"Malgun Gothic","맑은 고딕",helvetica,"Apple SD Gothic Neo",sans-serif;
+  
+    }
+    .data_no2 .cont2 {
+      display: table-cell;
+      vertical-align: middle;
+    }
+    .data_no2 .cont2 strong {
+      position: relative;
+      display: block;
+      padding-top: 70px;
+      color: #333;
+      line-height: 1.6;
+      font-size: 15px;
+      font-weight: 400;
+      font-family: -apple-system,BlinkMacSystemFont,"Malgun Gothic","맑은 고딕",helvetica,"Apple SD Gothic Neo",sans-serif;
+      }
+      .data_no2 .cont2 strong:before {
+        content: "";
+        display: inline-block;
+        width: 45px;
+        height: 45px;
+        position: absolute;
+        top: 5px;
+        left: 50%;
+        margin-left: -22px;
+        background: url(https://image.hanatour.com/usr/static/img2/pc/com/spr_icn.png) no-repeat;
+        background-position: 0 -205px;
+      }
+    /*-------------마일리지테이블-------------*/
+    #topBtn {
+      position: absolute;
+      float: right;
+      right: 2%;
+      bottom: 2%;
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      display: block;
+      background: gray;
+      color: #fff;
+      font-size: 15px;
+      text-align: center;
+      border-radius: 5px;
+      cursor: pointer;
+      font-family: -apple-system,BlinkMacSystemFont,"Malgun Gothic","맑은 고딕",helvetica,"Apple SD Gothic Neo",sans-serif;
+      font-weight: bold;
+    }
+    /*--------------------top----------------*/
+  .service-box{
+    position: absolute;
+    margin-top: 40px;
+    width: 1190px;
+    height: 300px;
+    border: none;
+  }
+  .service-box-head{
+    position: relative;
+    width: 1190px;
+    height: 40px;
+    border: none; 
+    text-align: right;        
+  }
+  .service-box .service-box-head {
+    float: right;
+    font-size: 25px;
+    font-family: -apple-system,BlinkMacSystemFont,"Malgun Gothic","맑은 고딕",helvetica,"Apple SD Gothic Neo",sans-serif;
+    text-align: right;    
+  }
+  .service-box .service-box-head ul, li{
+    position: relative;
+    text-align: center;
+    display: inline;
+    font-size: 30px; 
+    float: right;    
+    margin-top: 30px;        
+  }
+  .service-box-head ul, li span{
+    color: gray;
+    font-size: 15px;
+    font-weight:100;
+    cursor:default;    
+  }
+  .service-box li a{
+    color:#29c16d72;
+  } 
+  
+  .service-box li a:hover{
+    font-size: 35px;
+  }
+
+    /*----------서비스-----------*/
+    /* 푸터 */
+  footer{
+    width: 100%; margin-top: 60px; padding-bottom: 10px; background: #f7f7f7;
+    box-sizing: border-box;
+  }
+  footer .box-footer{
+    width: 940px; margin: 0 auto;
+  }
+  footer .box-footer .footer-data{
+    padding: 20px 0; border-top: 1px solid #e6e6e6; position: relative;
+  }
+  footer .box-footer .footer-data::after{
+    content: ''; display: block; clear: both;
+  }
+  footer .box-footer .footer-data .footer-menu{
+    width: 100%; padding-top: 10px; overflow: hidden;
+  }
+  footer .footer-data .footer-menu li{
+    float: left; line-height: 30px;
+  }
+  footer .footer-data .footer-menu li:first-child{
+    padding-left: 2px;
+  }
+  footer .footer-data .footer-menu a{
+    margin-right: 30px; color: #666; font-size: 13px; letter-spacing: -0.25px;
+  }
+  footer .footer-data .footer-menu a.personal-info{
+    color: #2c47dc; font-weight: bold;
+  }
+  footer .footer-data .footer-address{
+    clear: both; padding-top: 6px;
+  }
+  footer .footer-data .footer-address li{
+    display: inline-block; margin-right: 5px; line-height: 1.8; color: #666; font-size: 13px;
+  }
+  footer .footer-data .footer-address li>span{
+    padding-right: 10px;
+  }
+  /* 푸터 완료 */
+  

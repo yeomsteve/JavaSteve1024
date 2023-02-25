@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>마이 페이지</title>
+	<script src="../Semi-project/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous"></link>
+	<link rel="stylesheet" href="2semi_yeom.css">
+</head>
+<body>
+    <div class="quickmenu">
+        <ul>
+          <li><a href="#">등급별혜택</a></li>
+          <li><a href="#">1:1문의</a></li>
+          <li><a href="#">후기</a></li>
+        </ul>
+      </div>
+	<div class="header">
+		<div class="head-box clearfix">
+			<!-- 	<div class="menu-box">
+				<button class="btn-menu"><i class="fas fa-bars"></i></button>
+			</div> -->
+			<div class="main-icon-box"><a href="#"><img src="/JavaSteve1024/Semi/img/logo.png" alt="#"></a></div>
+			<div class="search-containerbox clearfix">
+				<div class="search-box clearfix">
+					<input type="text" placeholder="여행을 떠나요" class="search">
+					<a href="#" class="btn-search"><i class="fas fa-search"></i></a>
+				</div>
+				
+			</div>
+			<div class="box-quickMenu clearfix">
+				<div class="box-menu">
+					<a href="#" class="btn-quick"><i class="fas fa-map-marked-alt"></i></i>
+					<span class="text-quick">여행지도</span>
+					</a>
+				</div>
+				<div class="box-menu">
+					<a href="#" class="btn-quick"><i class="fas fa-shopping-bag"></i>
+					<span class="text-quick">장바구니</span>
+					</a>
+				</div>
+				<div class="box-menu">
+					<a href="" class="btn-quick"><i class="fas fa-user"></i>
+					<span class="text-quick">마이페이지</span>
+					</a>
+				</div>
+			</div>
+			<div class="main-menu-box">
+				<nav class="list-menu">
+					<div class="item-menu">
+						<a href="#" class="link-menu"><img class= "icon-menu"src="/JavaSteve1024/Semi/img/airplane.avif" alt="">여행</a>
+					</div>
+					<div class="item-menu">
+						<a href="#" class="link-menu"><img class= "icon-menu"src="/JavaSteve1024/Semi/img/food.png" alt="">음식</a>
+					</div>
+					<div class="item-menu">
+						<a href="#" class="link-menu"><img class= "icon-menu"src="/JavaSteve1024/Semi/img/hotel.png" alt="">숙박</a>
+					</div>
+				</nav>
+			</div>
+		</div>
+	</div>  
+	<div class="contents">
+        <div class="content-box">
+            <div class="content-title">마이 페이지  <div class="info"><a href="#">회원정보 수정</a></div>                 
+        		</div>
+			<div class="content-menu" id="div1">
+				<ul class="list-menu1">
+					<li class="item-menu1 selected">
+						<a href="#div1" class="link-menu1">예약내역</a>
+					</li>
+					<li class="item-menu1">
+						<a href="#div2" class="link-menu1">문의내역</a>
+					</li>
+					<li class="item-menu1">
+						<a href="#div3" class="link-menu1">마일리지</a>
+					</li>
+					<li class="item-menu1">
+						<a href="#div4" class="link-menu1">관심상품</a>
+					</li>
+					<li class="item-menu1">
+						<a href="#div5" class="link-menu1">여행후기</a>
+					</li>				
+				</ul>
+				</div>
+				<div class="reservation-box">
+					<div class="reservation-head"><strong>예약내역</strong>
+							<span class="right_cont">
+								<a href="http://www.naver.com" class="counter">더보기</a>
+								</span>					
+						</div>
+					<div class="tbl">
+						<table class="board_type">
+							<colgroup>
+								<col style="width: 15%;">
+								<col>
+								<col style="width: 13%;">
+								<col style="width: 7%;">
+								<col style="width: 13%;">
+								<col style="width: 11%;">
+							</colgroup>
+							<thead>
+								<th>예약날짜/예약번호</th>
+								<th>상품명</th>
+								<th>결제금액</th>
+								<th>인원</th>
+								<th>예약자명</th>
+								<th>예약상태</th>
+							</thead>
+							<tbody>
+								<tr>
+									<td colspan="6">
+										<div class="data_no">
+											<div class="cont">
+												<strong id="div2">
+													"현재 예약내역이 존재하지 않습니다."</strong><br>
+												"즐거운 여행계획을 준비해 보세요"
+											</div>
+										</div>
+									</td>
+								</tr>
+							</tboddy>
+						</table>
+						</div>
+					</div>
+					<div class="qna-box">
+						<div class="qna-head"><strong>문의내역</strong>
+								<span class="right_cont1">
+									<a href="http://www.naver.com" class="counter">더보기</a>
+									</span>					
+							</div>
+						<div class="tbl1">
+							<table class="board_type1">
+								<colgroup>
+									<col style="width: 15%;">
+									<col>
+									<col style="width: 13%;">
+									<col style="width: 7%;">
+									<col style="width: 13%;">
+									<col style="width: 11%;">
+								</colgroup>
+								<thead>
+									<th>문의날짜/문의번호</th>
+									<th>내용(간략히)</th>
+									<th>제목</th>
+									<th>아이디</th>
+									<th>이름</th>
+									<th>답변상태</th>
+								</thead>
+								<tbody>
+									<tr>
+										<td colspan="6" >
+											<div class="data_no1">
+												<div class="cont1">
+													<strong id="div3">
+														"현재 문의내역이 존재하지 않습니다."</strong><br>
+													"빠른 시일내 답변 드리겠습니다."
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tboddy>
+							</table>
+							</div>
+						</div>
+						<div class="mileage-box">
+							<div class="mileage-head"><strong>마일리지</strong>
+									<span class="right_cont2">
+										<a href="http://www.naver.com" class="counter">더보기</a>
+										</span>					
+								</div>
+							<div class="tbl2">
+								<table class="board_type2">
+									<colgroup>
+										<col style="width: 15%;">
+										<col>
+										<col style="width: 13%;">
+										<col style="width: 7%;">
+										<col style="width: 13%;">
+										<col style="width: 11%;">
+									</colgroup>
+									<thead>
+										<th>발급날짜/발급번호</th>
+										<th>발급내용</th>
+										<th>제목</th>
+										<th>아이디</th>
+										<th>이름</th>
+										<th>발급상태</th>
+									</thead>
+									<tbody>
+										<tr>
+											<td colspan="6" >
+												<div class="data_no2" >
+													<div class="cont2" id="div4">
+														<strong id="div5">
+															"현재 마일리지 내역이 존재하지 않습니다."</strong><br>
+														"Smile"
+													</div>
+												</div>
+											</td>
+										</tr>
+									</tboddy>
+								</table>
+								</div>
+							</div>
+					<div class="service-box">						
+						<div class="service-box-head"><strong>서비스 바로가기</strong>
+							</div>							
+						<ul>
+							<li><a href="http://www.naver.com" class="fa fa-regular fa-comment" style="width:100px; height:105px;"><br><br>
+								<span>문의내역</span>									
+									</span>
+									</a>                
+								</li>
+							<li><a href="http://www.naver.com" class="fas fa-dollar-sign" style="width:100px; height:105px;"><br><br>
+								<span>마일리지								
+									</span>
+									</a>                
+								</li>
+							<li><a href="http://www.naver.com" class="fas fa-heart" style="width:100px; height:105px;"><br><br>
+								<span>관심상품</span>
+									</a>                
+								</li>
+							<li><a href="http://www.naver.com" class="fas fa-road" style="width:100px; height:105px;"><br><br>
+								<span>여행후기</span>
+									</a>                
+								</li>		
+						</ul>	
+					</div>
+					<div>
+						<span id="topBtn">Top</span>
+					  </div>				
+	    	</div>  
+
+	<div class="footer">
+		<footer>
+			<div class="box-footer">
+					<div class="footer-data">
+							<ul class="footer-menu">
+									<li>
+											<a href="#" class="personal-info">개인정보처리방침</a>
+									</li>
+									<li>
+											<a href="#">이용약관</a>
+									</li>
+									<li>
+											<a href="#">위치서비스이용약관</a>
+									</li>
+									<li>
+											<a href="#">저작권정책</a>
+									</li>
+									<li>
+											<a href="#">고객서비스헌장</a>
+									</li>
+									<li>
+											<a href="#">전자우편무단수집거부</a>
+									</li>
+									<li>
+											<a href="#">Q&A</a>
+									</li>
+									<li>
+											<a href="#">찾아오시는 길</a>
+									</li>
+							</ul>
+							<ul class="footer-address">
+									<li>
+											<span>우)12345</span>
+											<span>서울특별시 강남구</span>
+											TEL : 02-123-4567
+									</li>
+									<li>사업자등록번호 : 123-12-12345</li>
+									<li>통신판매업신고 : 제1234-서울강남-1234호</li>
+							</ul>
+					</div>
+			</div>          
+	</footer>
+	</div>
+	<script>
+		$('.search').focus(function(){
+			$(this).css('background-color','#fff')
+			$('.search-keyword').css('display','block')
+		})
+		$('.search').blur(function(){
+			$(this).css('background-color','rgba(0,0,0,0.1)')
+			$('.search-keyword').css('display','none')
+		})
+		$('.btn-more').click(function(){
+			$('.btn-more').toggleClass('dis-off');
+			$('.inner-tag').toggleClass('dis-height')
+		})
+		
+		$('.item-area').click(function(e){
+			if($(this).hasClass('last')){
+				return lastClick();
+			}
+			e.preventDefault();
+			let check = $(this);
+			$('.item-area').each(function(index){
+				$('.item-area').removeClass('check');
+				check.addClass('check')
+				if($(this).hasClass('check')){
+					selectRegion(index);
+				}
+			})
+		})
+		function lastClick(){
+			$('.last').click();
+		}
+		function selectRegion(index){
+			$('.contents-region').removeClass('checked')
+			$('.contents-region').each(function(i){
+				if(index == i){
+					$(this).addClass('checked')
+				}
+			})
+		}
+	
+                /*----------헤더----------*/
+				$('.item-menu1').hover(function(){
+			selecteMenu($(this));
+		});
+		function selecteMenu(el){
+			$('.item-menu1').removeClass('selected');
+			if(el != null && el.length != 0)
+				el.addClass('selected');
+		}
+
+		/*-------------리스트메뉴1--------------*/
+		$(document).ready(function($) {
+
+		$(".link-menu1").click(function(event){         
+
+		event.preventDefault();
+
+		$('html,body').animate({scrollTop:$(this.hash).offset().top}, 1000);
+
+				});
+			});
+		/*--------------------------------------*/
+		var topEle = $('#topBtn');
+		var delay = 1000;
+		topEle.on('click', function() {
+  		$('html, body').stop().animate({scrollTop: 0}, delay);
+			});	
+		/*-----------------맨위로 가는 버튼---------------------*/
+		</script>
+   
+
+  
+ 
+
+    
+</body>
+</html>
