@@ -77,7 +77,7 @@
 			        async:true,
 			        type:'GET',
 			        //data:JSON.stringify(obj),
-			        url:"<c:url value='/board/like/1/${board.bo_num}'></c:url>",
+			        url:"<c:url value='/board/like/"+li_state+"/${board.bo_num}'></c:url>",
 			        //서버에서 받는 데이터 타입
 			        dataType:"json",
 			        //서버에 보내는 데이터 타입
