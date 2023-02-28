@@ -1,8 +1,11 @@
 package kr.kh.spring.controller;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,10 +13,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import kr.kh.spring.service.BoardService;
+import kr.kh.spring.utils.MessageUtils;
 import kr.kh.spring.vo.BoardTypeVO;
 import kr.kh.spring.vo.BoardVO;
 import kr.kh.spring.vo.FileVO;
@@ -67,12 +72,34 @@ public class BoardController {
 	}
 	@RequestMapping(value = "/board/detail/{bo_num}", method=RequestMethod.GET)
 	public ModelAndView boardDetail(ModelAndView mv,
-			@PathVariable("bo_num")int bo_num) {
-		BoardVO board = boardService.getBoard(bo_num);
+			@PathVariable("bo_num")int bo_num, HttpSession session,
+			HttpServletResponse response) {
+		MemberVO user = (MemberVO)session.getAttribute("user");
+		BoardVO board = boardService.getBoard(bo_num, user);
 		ArrayList<FileVO> files = boardService.getFileList(bo_num);
+		
 		mv.addObject("board", board);
 		mv.addObject("files", files);
-		mv.setViewName("/board/detail");
+		if(board == null) {
+			MessageUtils.alertAndMovePage(response,
+					"삭제되거나 조회 권한이 없는 게시글입니다.",
+					"/spring", "/board/list");			
+		}else
+			mv.setViewName("board/detail");
 		return mv;
+	}
+	
+	@ResponseBody
+	@RequestMapping(value = "/board/like/{li_state}/{bo_num}", method=RequestMethod.GET)
+	public Map<String, Object> boardLike(HttpSession session,
+			@PathVariable("li_state")int li_state,
+			@PathVariable("li_state")int bo_num) {
+		HashMap<String, Object> map = new HashMap<String, Object>();
+		map.put("name", "홍길동");
+		//res값이 1: 추천, -1: 비추천, 0: 취소
+		MemberVO user = (MemberVO)session.getAttribute("user");
+		int res = boardService. updateLikes(user, bo_num, li_state );
+		map.put("res", res);
+		return map;
 	}
 }
