@@ -42,6 +42,6 @@ public class AdminServiceImp implements AdminService{
 		if(bt_num <= 0) 
 			return false;
 		return boardDao.deleteBoardType(bt_num);
-	}
+	}	
 
 }

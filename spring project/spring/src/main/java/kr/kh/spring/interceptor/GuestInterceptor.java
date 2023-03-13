@@ -8,7 +8,7 @@ import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 import kr.kh.spring.vo.MemberVO;
 
-public class AdminInterceptor extends HandlerInterceptorAdapter  {
+public class GuestInterceptor extends HandlerInterceptorAdapter  {
 	
 	@Override
 	public boolean preHandle(HttpServletRequest request, 
@@ -17,7 +17,7 @@ public class AdminInterceptor extends HandlerInterceptorAdapter  {
 			throws Exception {
 		HttpSession session = request.getSession();
 		MemberVO user = (MemberVO)session.getAttribute("user");
-		if(user == null || user.getMe_authority() < 9) {
+		if(user != null) {
 			response.sendRedirect(request.getContextPath() + "/");
 			return false;
 		}

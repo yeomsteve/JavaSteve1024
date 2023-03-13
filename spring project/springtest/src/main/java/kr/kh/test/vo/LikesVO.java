@@ -1,4 +1,4 @@
-package kr.kh.spring.vo;
+package kr.kh.test.vo;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
