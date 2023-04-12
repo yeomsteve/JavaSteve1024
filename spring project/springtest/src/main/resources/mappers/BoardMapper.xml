@@ -117,12 +117,12 @@
   	where
   		fi_num = #{fi_num}
   </select>
-  <select id="selectLikes"  resultType="kr.kh.test.vo.LikesVO">
-  	select
+  <select id="selectLikes" resultType="kr.kh.test.vo.LikesVO">
+  	select 
   		*
   	from
   		likes
-  	where
+  	where 
   		li_me_id = #{li_me_id} and li_bo_num = #{li_bo_num}
   </select>
   <insert id="insertLikes">
@@ -131,12 +131,12 @@
   		values(#{li.li_me_id}, #{li.li_state}, #{li.li_bo_num})
   </insert>
   <update id="updateLikes">
-  	update 
+  	update
   		likes
   	set
   		li_state = #{li.li_state}
   	where
-  		li_me_id = #{li.li_me_id} and li_bo_num = #{li.li_bo_num}	
+  		li_me_id = #{li.li_me_id} and li_bo_num = #{li.li_bo_num}
   </update>
   <update id="updateBoardUpAndDown">
   	update
@@ -144,19 +144,19 @@
   	set
   		bo_up = (
   			select 
-  				count(*)
-  			 from 
-  			 	likes 
+  				count(*) 
+  			from 
+  				likes 
   			where 
   				li_bo_num = #{li_bo_num} and li_state = 1),
   		bo_down = (
   			select 
-  				count(*)
-  			 from 
-  			 	likes 
+  				count(*) 
+  			from 
+  				likes 
   			where 
   				li_bo_num = #{li_bo_num} and li_state = -1)
-  	where
-  		bo_num = #{li_bo_num} 			
+  	where 
+  		bo_num = #{li_bo_num}
   </update>
 </mapper>

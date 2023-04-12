@@ -21,6 +21,7 @@ import kr.kh.test.service.BoardService;
 import kr.kh.test.vo.BoardTypeVO;
 import kr.kh.test.vo.BoardVO;
 import kr.kh.test.vo.FileVO;
+import kr.kh.test.vo.LikesVO;
 import kr.kh.test.vo.MemberVO;
 
 @Controller
@@ -73,10 +74,14 @@ public class BoardController {
 	}
 	@RequestMapping(value="/board/detail/{bo_num}", method=RequestMethod.GET)
 	public ModelAndView boardDetail(ModelAndView mv,
-			@PathVariable("bo_num")int bo_num) {
+			@PathVariable("bo_num")int bo_num,
+			HttpSession session) {
 		BoardVO board = boardService.getBoardAndUpdateView(bo_num);
 		ArrayList<FileVO> fileList = boardService.getFileList(bo_num);
+		MemberVO user = (MemberVO) session.getAttribute("user");
+		LikesVO likesVo = boardService.getLikes(user, bo_num);
 		
+		mv.addObject("like", likesVo);
 		mv.addObject("board", board);
 		mv.addObject("fileList", fileList);
 		mv.setViewName("/board/detail");
@@ -136,11 +141,12 @@ public class BoardController {
 		return mv;
 	}
 	@ResponseBody
-	@RequestMapping(value="/board/like/{li_bo_num}/{li_state}",
+	@RequestMapping(value="/board/like/{li_bo_num}/{li_state}", 
 			method=RequestMethod.GET)
 	public Map<String, Object> boardLike(
 			@PathVariable("li_bo_num")int li_bo_num,
-			@PathVariable("li_state")int li_state){
+			@PathVariable("li_state")int li_state,
+			HttpSession session){
 		Map<String, Object> map = new HashMap<String, Object>();
 		MemberVO user = (MemberVO)session.getAttribute("user");
 		int res = boardService.updateLike(li_bo_num, li_state, user);

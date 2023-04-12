@@ -149,5 +149,27 @@ public class MemberServiceImp implements MemberService {
 		int updateCount = memberDao.updateMembetAuthority(mok.getMo_me_id(),1);
 		return updateCount != 0;
 	}
+
+	@Override
+	public boolean checkId(MemberVO member) {
+		if(member == null)
+			return false;
+		String idRegex = "^[a-zA-Z][a-zA-Z0-9!@#$]{4,12}$";
+		if(member.getMe_id() == null || 
+				!Pattern.matches(idRegex, member.getMe_id()))
+			return false;
+		MemberVO user = memberDao.selectMemberById(member.getMe_id());
+		return user == null;
+	}
+
+	@Override
+	public void updateSession(MemberVO user) {
+		memberDao.updateSession(user);
+	}
+
+	@Override
+	public MemberVO getMemberBySession(String me_session_id) {
+		return memberDao.selectMemberBySession(me_session_id);
+	}
 	
 }

@@ -13,4 +13,10 @@ public interface MemberService {
 
 	boolean emailAuthentication(MemberOKVO mok);
 
+	boolean checkId(MemberVO member);
+
+	void updateSession(MemberVO user);
+
+	MemberVO getMemberBySession(String me_session_id);
+
 }

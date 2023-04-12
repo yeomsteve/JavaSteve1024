@@ -1,7 +1,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<div class="container">
+    <div class="container">
 	<h1>로그인</h1>
 	<form action="<c:url value='/login'></c:url>" method="post">
 		<div class="form-group">
@@ -12,6 +12,10 @@
 			<label for="pw">비번:</label>
 			<input type="password" class="form-control" id="pw" name="me_pw">
 		</div>
+		<div>
+			<input type="checkbox" name="autoLogin" value="true"> 자동로그인
+		</div>
 		<button class="btn btn-outline-success col-12">로그인</button>
 	</form>
 </div>
+

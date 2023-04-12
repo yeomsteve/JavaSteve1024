@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="findid.css">
+	<title>아이디찾기</title>
+	<script src="/js/js/jquery.min.js"></script>
+</head>
+
+<body>
+	<div class="container">
+	<form class="form-horizontal" role="form" method="POST" action="starters?cmd=findIdAction">
+			<div class="row">
+				<div class="col-md-10 inputbb">
+					<div class="form-group has-danger">
+						<div class="input-group mb-2 mr-sm-2 mb-sm-0">
+							<input type="text" name="name" class="form-control" id="account" placeholder="이름" required autofocus>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-10 inputbb">
+				<div class="form-group">
+					<div class="input-group mb-2 mr-sm-2 mb-sm-0">
+						<input type="email" name="email" class="form-control" id="email" placeholder="이메일" required autofocus>
+					</div>
+				</div>
+			</div>
+		</div>
+	<div class="row">
+		<div class="col-md-10 inputbb">
+			<div class="form-group has-danger">
+				<div class="input-group mb-2 mr-sm-2 mb-sm-0">
+					<input type="text" name="name" class="form-control" id="birth" placeholder="생년월일" required autofocus>
+				</div>
+			</div>
+		</div>
+	</div>		
+	<div class="row">
+		<div class="col-md-10 inputbb">
+			<button type="submit" class="btn-find">아이디 찾기</button>
+		</div>
+	</div>	
+</form>
+</div>
+<script>
+	$('.form').submit(function(){
+			let id = $('[name=name]').val();
+			if(id.length == 0){
+				alert('아이디는 필수 항목입니다.');
+				$('[name=name]').focus();
+				return false;
+			}
+		});
+			
+</script>
+</body>
+
+</html>
